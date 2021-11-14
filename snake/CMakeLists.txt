@@ -1,22 +1,25 @@
-set(target_name "new_project_name")
+set(target_name "snake")
 
 set(src_precompiled
-    "src/new_project_name/precompiled.hpp")
+    "src/snake/precompiled.hpp")
 
-set(src_new_project_name
-    "src/new_project_name/new_project_name.hpp")
+set(src_snake
+    "src/snake/main.cpp"
+    "src/snake/snake.cpp"
+    "src/snake/snake.hpp")
 
 set(src_files
     ${src_precompiled}
-    ${src_new_project_name})
+    ${src_snake})
 
 # Project
-add_library(${target_name} STATIC ${src_files})
+add_executable(${target_name} ${src_files})
 set_target_properties(${target_name} PROPERTIES LINKER_LANGUAGE CXX)
 
 target_link_libraries(${target_name}
     compiler_features
-    compiler_warnings)
+    compiler_warnings
+    Wraith::Engine)
 
 target_include_directories(${target_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_precompile_headers(${target_name} PUBLIC ${src_precompiled})
@@ -24,4 +27,6 @@ target_precompile_headers(${target_name} PUBLIC ${src_precompiled})
 auto_group_sources(src_files ${CMAKE_CURRENT_SOURCE_DIR})
 source_group("src/precompiled" REGULAR_EXPRESSION "cmake_pch\.[ch]xx")
 
-set_target_properties(${target_name} PROPERTIES FOLDER ${${PROJECT_NAME}_FOLDER})
+set_target_properties(${target_name} PROPERTIES
+    FOLDER ${${PROJECT_NAME}_FOLDER}
+    VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_HOME_DIRECTORY}/bin)
