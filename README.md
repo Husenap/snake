@@ -1,5 +1,5 @@
-[![Build](https://github.com/Husenap/cmake-project-template/actions/workflows/build.yml/badge.svg)](https://github.com/Husenap/cmake-project-template/actions/workflows/build.yml)
+[![Build](https://github.com/Husenap/snake/actions/workflows/build.yml/badge.svg)](https://github.com/Husenap/snake/actions/workflows/build.yml)
 
-# cmake-project-template
+# snake
 
-Basic C++ project template using CMake.
+Basic C++ Snake game built using [Wraith](https://github.com/KyaZero/Wraith).
