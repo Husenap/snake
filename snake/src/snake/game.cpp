@@ -21,7 +21,8 @@ Game::Game()
 
     {
         auto entity = m_Scene.CreateEntity();
-        entity.AddComponent<Wraith::NativeScriptComponent>().Bind<Snake>(&m_Scene);
+        entity.AddComponent<Wraith::NativeScriptComponent>().Bind<Snake>(
+            &m_Scene);
     }
 
     m_Scene.Play();

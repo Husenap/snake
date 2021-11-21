@@ -20,9 +20,9 @@ private:
         Wraith::Vec2i  pos;
     };
 
-    void    Move();
+    void Move();
     void CreateSegment(Wraith::Vec2i p);
-    void    UpdateSegment(std::size_t index, Wraith::Vec2i p);
+    void UpdateSegment(std::size_t index, Wraith::Vec2i p);
 
     std::vector<Segment> m_Segments;
     Wraith::Scene*       m_Scene;
