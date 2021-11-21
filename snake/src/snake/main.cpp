@@ -1,7 +1,7 @@
-#include "snake.hpp"
+#include "game.hpp"
 
-int main(int argc, char** argv) {
-    snake::Snake game;
+int main() {
+    snake::Game game;
     game.Run();
     return 0;
 }

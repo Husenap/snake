@@ -4,6 +4,8 @@ set(src_precompiled
     "src/snake/precompiled.hpp")
 
 set(src_snake
+    "src/snake/game.cpp"
+    "src/snake/game.hpp"
     "src/snake/main.cpp"
     "src/snake/snake.cpp"
     "src/snake/snake.hpp")
